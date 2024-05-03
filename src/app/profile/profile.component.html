@@ -1,0 +1,16 @@
+<div class="container col-md-4">
+    <h2>User Profile</h2>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">User Information</h5>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><strong>ID:</strong> {{ user.id }}</li>
+          <li class="list-group-item"><strong>Name:</strong> {{ user.name }}</li>
+          <li class="list-group-item"><strong>Email:</strong> {{ user.email }}</li>
+          <!-- <li class="list-group-item"><strong>Password:</strong> {{ user.password }}</li> -->
+          <li class="list-group-item"><strong>Admin:</strong> {{ user.isAdmin ? 'Yes' : 'No' }}</li>
+          <!-- Add more user properties as needed -->
+        </ul>
+      </div>
+    </div>
+  </div>

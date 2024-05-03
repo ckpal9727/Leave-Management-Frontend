@@ -1,0 +1,10 @@
+.welcome-heading {
+    font-family: Arial, sans-serif; /* Specify desired font family */
+    color: #3498db; /* Set text color */
+    text-align: center; /* Center align the text */
+    text-transform: uppercase; /* Convert text to uppercase */
+    letter-spacing: 2px; /* Add spacing between letters */
+    margin-top: 20px; /* Add some top margin for spacing */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add a subtle text shadow */
+  }
+  

@@ -1,0 +1,10 @@
+.sidebar {
+    height: 100vh; /* Set sidebar height to full viewport height */
+    overflow-y: auto; /* Add vertical scrollbar */
+  }
+  
+  .table-container {
+    max-height: calc(100vh - 56px); /* Adjust height of table container considering navbar height */
+    overflow-y: auto; /* Add vertical scrollbar */
+  }
+  

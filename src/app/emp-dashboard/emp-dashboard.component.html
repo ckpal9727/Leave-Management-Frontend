@@ -1,0 +1,61 @@
+
+<div class="container" [ngStyle]="{ display: 'inline-block', margin: '10px' }">
+  <p style="display: inline-block; margin-right: 10px;">Casual: {{ myLeave[1] }}</p>
+  <p style="display: inline-block; margin-right: 10px;">Maternity: {{ myLeave[2] }}</p>
+  <p style="display: inline-block;">Seek: {{ myLeave[3] }}</p>
+</div>
+
+
+<div class="container-fluid">
+    <div class="row">
+      <!-- Left side: Leave requests -->
+      <div class="col-md-9">
+        <h2>Leave Requests</h2>
+        <div class="container">
+            <div class="row">
+              <div class="col">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                    
+                     
+                      <th>Leave Type</th>
+                      <th>Start Date</th>
+                      <th>End Date</th>
+                      <th>Number of Leave</th>
+                      <th>Leave Status</th>
+                      <th>Cancell</th>
+                      <th>Edit</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let leave of leaveList.data">
+                      <td>{{ leave.id }}</td>
+                      
+                      
+                      <td>{{ leave.leaveType.name }}</td>
+                      <td>{{ leave.startDate | date }}</td>
+                      <td>{{ leave.endDate |date }}</td>
+                      <td>{{ leave.numbserOfLeave }}</td>
+                      <td>{{ leave.leaveStatus===0?'Approved': leave.leaveStatus===1?'Pending':'Rejected'}}</td>
+                      <td ><button [disabled]="leave.leaveStatus===0 || leave.leaveStatus===2" class="btn btn-danger" (click)="CancelLeave(leave.id)">Cancel</button></td>
+                      <td ><button [disabled]="leave.leaveStatus===0 || leave.leaveStatus===2" class="btn btn-primary" (click)="editLeave(leave.id)">Edit </button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          
+      </div>
+  
+      <!-- Right side: Apply leave form -->
+      <div class="col-md-3">        
+       <h2 class="my-5">Apply leave</h2>
+       <app-appyleave (leaveApplid)="reloadPage()"/>
+
+      </div>
+    </div>
+  </div>
+  

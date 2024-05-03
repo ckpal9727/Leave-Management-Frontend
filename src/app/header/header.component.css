@@ -1,0 +1,18 @@
+.logo {
+    width: 40px; /* Set logo width */
+    height: 40px; /* Set logo height */
+    background-color: #3498db; /* Set circle color */
+    border-radius: 50%; /* Make the div circular */
+    position: relative; /* Position rectangle relative to the circle */
+  }
+  
+  .logo::after {
+    content: ""; /* Required for pseudo-elements */
+    position: absolute; /* Position the rectangle */
+    bottom: 0; /* Align rectangle to bottom of the circle */
+    right: 0; /* Align rectangle to right side of the circle */
+    width: 28px; /* Set rectangle width */
+    height: 12px; /* Set rectangle height */
+    background-color: #2ecc71; /* Set rectangle color */
+  }
+  

@@ -1,0 +1,9 @@
+<div *ngIf="loggedInUser?.role === 'Admin'; else userBlock">
+    Admin
+  </div>
+  <ng-template #userBlock>
+    <div>
+      User
+    </div>
+  </ng-template>
+  
